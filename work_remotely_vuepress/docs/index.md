@@ -511,8 +511,26 @@ pip install django-cors-headers
 
 4 - 🖼️ pillow 📷
 
-```
+```cmd
 pip install pillow
+```
+
+5 - 🥣 Beautifulsoup4 ✨
+
+```cmd
+pip install beautifulsoup4
+```
+
+6 - 💻 Selenium 🕵️‍♂️
+
+```cmd
+pip install selenium
+```
+
+7 - 🌐 Requests 📬
+
+```cmd
+pip install requests
 ```
 
 ### 📂 Create Django Project
