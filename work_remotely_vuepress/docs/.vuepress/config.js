@@ -1,18 +1,25 @@
-import { defaultTheme } from '@vuepress/theme-default'
-import { defineUserConfig } from 'vuepress/cli'
-import { viteBundler } from '@vuepress/bundler-vite'
-
+// استيراد الثيم الافتراضي من VuePress 🖌️
+import { defaultTheme } from "@vuepress/theme-default";
+// استيراد دالة تعريف إعدادات المستخدم في VuePress 🛠️
+import { defineUserConfig } from "vuepress/cli";
+// استيراد الباني Vite لاستخدامه مع VuePress ⚡
+import { viteBundler } from "@vuepress/bundler-vite";
+// تصدير إعدادات المستخدم الرئيسية 📄
 export default defineUserConfig({
-  lang: 'en-US',
+  // لغة الموقع 🌐
+  lang: "en-US",
+  // عنوان الموقع الرئيسي 📚
+  title: "Work Remotely",
+  // وصف الموقع 💬
+  description: "My first VuePress Site",
 
-  title: 'VuePress',
-  description: 'My first VuePress Site',
-
+  // إعدادات الثيم الافتراضي مع تخصيص بعض الخصائص 🛠️
   theme: defaultTheme({
-    logo: 'https://vuejs.press/images/hero.png',
+    logo: "https://vuejs.press/images/hero.png",
 
-    navbar: ['/', '/get-started'],
+    // شريط التنقل في الموقع 🚀
+    navbar: ["/", "/Learn_Django/index", "/get-started"]
   }),
-
-  bundler: viteBundler(),
-})
+  // استخدام الباني Vite لبناء المشروع ⚡
+  bundler: viteBundler()
+});

@@ -31,6 +31,8 @@ class UserSerializer(serializers.ModelSerializer):
             "friends_count",
             # Tasks
             "task_count",
+            # skills
+            "skills",
             # Data & Time
             "date_joined",
             "date_joined_formatted",

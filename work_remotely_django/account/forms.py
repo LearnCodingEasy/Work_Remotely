@@ -46,4 +46,6 @@ class ProfileForm(forms.ModelForm):
             "avatar",
             # 🖼️ User's Cover picture صورة ملف غلااف المستخدم
             "cover",
+            #
+            "skills",
         )

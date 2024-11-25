@@ -24,7 +24,8 @@ export const useUserStore = defineStore({
       // 📋 Number of tasks عدد المهام
       task_count: 0,
       // User Is Online
-      is_online: false
+      is_online: false,
+      skills: []
     }
   }),
   actions: {
@@ -47,7 +48,10 @@ export const useUserStore = defineStore({
         this.user.friends_count = localStorage.getItem("user.friends_count");
         this.user.task_count = localStorage.getItem("user.task_count");
         this.user.is_online = localStorage.getItem("user.is_online");
-        // this.user.is_online = true;
+        const skills = localStorage.getItem("user.skills");
+        this.user.skills = skills ? JSON.parse(skills) : [];
+        // تحويل المهارات إلى مصفوفة
+
         this.refreshToken();
       }
     },
@@ -81,6 +85,7 @@ export const useUserStore = defineStore({
       this.user.friends_count = null;
       this.user.task_count = null;
       this.user.is_online = false;
+      this.user.skills = [];
 
       localStorage.setItem("user.access", "");
       localStorage.setItem("user.refresh", "");
@@ -95,6 +100,7 @@ export const useUserStore = defineStore({
       localStorage.setItem("user.friends_count", "");
       localStorage.setItem("user.task_count", "");
       localStorage.setItem("user.is_online", "");
+      localStorage.setItem("user.skills", []);
     },
     // ✍️ Set user info in state and localStorage
     // ✍️ تعيين بيانات المستخدم في الحالة و localStorage
@@ -111,6 +117,7 @@ export const useUserStore = defineStore({
       this.user.friends_count = user.friends_count;
       this.user.task_count = user.task_count;
       this.user.is_online = user.is_online;
+      this.user.skills = user.skills;
       localStorage.setItem("user.id", this.user.id);
       localStorage.setItem("user.name", this.user.name);
       localStorage.setItem("user.surname", this.user.surname);
@@ -122,6 +129,8 @@ export const useUserStore = defineStore({
       localStorage.setItem("user.friends_count", this.user.friends_count);
       localStorage.setItem("user.task_count", this.user.task_count);
       localStorage.setItem("user.is_online", this.user.is_online);
+      // تخزين المهارات كمصفوفة JSON
+      localStorage.setItem("user.skills", JSON.stringify(this.user.skills));
     },
     // 🔄 Refresh access token
     // 🔄 تحديث رمز الوصول

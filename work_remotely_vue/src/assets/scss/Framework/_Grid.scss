@@ -1,0 +1,217 @@
+@import 'Media_Queries';
+// @use 'Media_Queries' as *;
+
+$gridNumber: 12;
+$start: 0;
+$end: 12;
+
+%grid {
+  display: grid;
+  position: relative;
+}
+
+@for $i from 1 through $gridNumber {
+  .grid {
+    @extend %grid;
+  }
+  .grid_#{$i} {
+    @extend %grid;
+    grid-template-columns: repeat($i, auto);
+  }
+  // Add your media queries here
+  // screen and (max-width: 568px)
+  // @include MediaQueries(Xxs) {}
+  .xs_grid_#{$i} {
+    @include MediaQueries(Mobile) {
+      display: grid;
+      grid-template-columns: repeat($i, auto);
+    }
+  }
+  .mobile_grid_#{$i} {
+    @include MediaQueries(Mobile) {
+      grid-template-columns: repeat($i, auto);
+    }
+  }
+  // screen and (min-width: 569px) and (max-width: 767px)
+  // @include MediaQueries(Xs) {}
+  .xs_grid_#{$i} {
+    @include MediaQueries(Tablet) {
+      display: grid;
+      grid-template-columns: repeat($i, auto);
+    }
+  }
+  .tablet_grid_#{$i} {
+    @include MediaQueries(Tablet) {
+      display: grid;
+      grid-template-columns: repeat($i, auto);
+    }
+  }
+  // screen and (min-width: 768px) and (max-width: 991px)
+  // @include MediaQueries(Md) {}
+  .md_grid_#{$i} {
+    @include MediaQueries(Laptop) {
+      display: grid;
+      grid-template-columns: repeat($i, auto);
+    }
+  }
+  .laptop_grid_#{$i} {
+    @include MediaQueries(Laptop) {
+      display: grid;
+      grid-template-columns: repeat($i, auto);
+    }
+  }
+  // screen and (min-width: 992px) and (max-width: 1199px)
+  // @include MediaQueries(Lg) {}
+  .lg_grid_#{$i} {
+    @include MediaQueries(LaptopLg) {
+      display: grid;
+      grid-template-columns: repeat($i, auto);
+    }
+  }
+  .laptop_lg_grid_#{$i} {
+    @include MediaQueries(LaptopLg) {
+      display: grid;
+      grid-template-columns: repeat($i, auto);
+    }
+  }
+  // screen and (min-width: 1200px) and (max-width: 1399px)
+  // @include MediaQueries(Xlg) {}
+  .xlg_grid_#{$i} {
+    @include MediaQueries(Desktop) {
+      display: grid;
+      grid-template-columns: repeat($i, auto);
+    }
+  }
+  .desktop_grid_#{$i} {
+    @include MediaQueries(Desktop) {
+      display: grid;
+      grid-template-columns: repeat($i, auto);
+    }
+  }
+  // screen and (min-width: 1400px)
+  // @include MediaQueries(Xxlg) {}
+  .xxlg_grid_#{$i} {
+    @include MediaQueries(DesktopLg) {
+      display: grid;
+      grid-template-columns: repeat($i, auto);
+    }
+  }
+  .desktop_lg_grid_#{$i} {
+    @include MediaQueries(DesktopLg) {
+      display: grid;
+      grid-template-columns: repeat($i, auto);
+    }
+  }
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // Childe
+  // يجعل العنصر يمتد عبر عدد الأعمدة المحدد بالكلاس
+  .item_#{$i} {
+    grid-column: span $i;
+  }
+  // Add your media queries here
+  // screen and (max-width: 568px)
+  // @include MediaQueries(Xxs) {}
+  .xsm_item_#{$i} {
+    @include MediaQueries(Mobile) {
+      grid-column: span $i;
+    }
+  }
+  .mobile_item_#{$i} {
+    @include MediaQueries(Mobile) {
+      grid-column: span $i;
+    }
+  }
+  // screen and (min-width: 569px) and (max-width: 767px)
+  // @include MediaQueries(Xs) {}
+  .sm_item_#{$i} {
+    @include MediaQueries(Tablet) {
+      grid-column: span $i;
+    }
+  }
+  .tablet_item_#{$i} {
+    @include MediaQueries(Tablet) {
+      grid-column: span $i;
+    }
+  }
+  // screen and (min-width: 768px) and (max-width: 991px)
+  // @include MediaQueries(Md) {}
+  .md_item_#{$i} {
+    @include MediaQueries(Laptop) {
+      grid-column: span $i;
+    }
+  }
+  .laptop_item_#{$i} {
+    @include MediaQueries(Laptop) {
+      grid-column: span $i;
+    }
+  }
+  // screen and (min-width: 992px) and (max-width: 1199px)
+  // @include MediaQueries(Lg) {}
+  .lg_item_#{$i} {
+    @include MediaQueries(LaptopLg) {
+      grid-column: span $i;
+    }
+  }
+  .laptop_lg_item_#{$i} {
+    @include MediaQueries(LaptopLg) {
+      grid-column: span $i;
+    }
+  }
+  // screen and (min-width: 1200px) and (max-width: 1399px)
+  // @include MediaQueries(Xlg) {}
+  .xlg_item_#{$i} {
+    @include MediaQueries(Desktop) {
+      grid-column: span $i;
+    }
+  }
+  .desktop_item_#{$i} {
+    @include MediaQueries(Desktop) {
+      grid-column: span $i;
+    }
+  }
+  // screen and (min-width: 1400px)
+  // @include MediaQueries(Xxlg) {}
+  .xxlg_item_#{$i} {
+    @include MediaQueries(DesktopLg) {
+      grid-column: span $i;
+    }
+  }
+  .desktop_lg_item_#{$i} {
+    @include MediaQueries(DesktopLg) {
+      grid-column: span $i;
+    }
+  }
+}
+@for $i from 1 through 100 {
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // ------------------------------------------------------
+  // Padding
+  .gap_#{$i} {
+    grid-gap: #{$i}px;
+  }
+}

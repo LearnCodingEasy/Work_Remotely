@@ -72,7 +72,10 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     # 📋 Custom Admin Link ربط المدير المخصص
     objects = CustomUserManager()
-
+    
+    # مهارات
+    skills = models.JSONField(default=list, blank=True, null=True)
+    
     # 👥 Friends and Characteristics of Friendships الأصدقاء وخصائص الصداقات
     friends = models.ManyToManyField("self")
     friends_count = models.IntegerField(default=0)
