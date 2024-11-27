@@ -15,22 +15,12 @@ const router = useRouter()
 onMounted(() => {
   // Perform any necessary operations on component mount
   if (!userStore.user.access) {
-    // console.log('User Data: ', userStore.user.access)
-    // Replace '/login' with your actual login route
     router.push('/login')
   } else {
-    // Set default Authorization header for axios
     axios.defaults.headers.common['Authorization'] = `Bearer ${userStore.user.access}`
-    // console.log('User Data: ', userStore.user)
   }
 })
 
-// For Toggle Theme
-// const op = ref(null)
-// const toggle = event => {
-//   // console.log('toggle: ', toggle);
-//   op.value.toggle(event)
-// }
 // Log Out
 let logout = () => {
   // console.log('User Log out')
@@ -48,6 +38,7 @@ let logout = () => {
       <div class="container mx-auto">
         <div class="header_inner">
           <prime_card class="header_card px-2" v-if="userStore.user.isAuthenticated">
+          <!-- <prime_card class="header_card px-2"> -->
             <template #content>
               <header class="header_header">
                 <nav class="header_nav">

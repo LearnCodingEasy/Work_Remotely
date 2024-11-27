@@ -3,6 +3,9 @@ import './assets/main.css'  // استيراد ملف CSS الرئيسي للمش
 // My Style
 import "./assets/scss/style.scss";  // استيراد ملف SCSS الخاص بالتصميم
 
+//
+import 'animate.css';
+
 import { createApp } from 'vue'  // استيراد دالة createApp من Vue لإنشاء التطبيق
 import { createPinia } from 'pinia'  // استيراد Pinia لإدارة الحالة (State Management) في Vue
 
@@ -12,7 +15,12 @@ import router from './router'  // استيراد إعدادات التوجيه (
 // Axios  Import
 // استيراد مكتبة Axios للتعامل مع طلبات HTTP
 import axios from "axios";
-axios.defaults.baseURL = "http://127.0.0.1:8000";  // تعيين الـ base URL الخاص بـ Axios
+// تعيين الـ base URL الخاص بـ Axios
+// axios.defaults.baseURL = "http://127.0.0.1:8000";
+
+// أثناء التطوير
+axios.defaults.baseURL = "http://192.168.1.5:8000";
+
 
 // --------------- PrimeVue Core Configuration ---------------
 // Import PrimeVue library configuration

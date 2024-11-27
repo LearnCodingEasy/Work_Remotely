@@ -31,6 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+
 # The address of the site that points to the local server.
 WEBSITE_URL = "http://127.0.0.1:8000"
 
@@ -70,6 +71,28 @@ CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5174",
 ]
 
+# ______________ 📺 __________________
+# أثناء التطوير
+# للسماح بكل الطلبات أثناء التطوير
+# استبدل 192.168.1.5 بعنوان IP لجهاز الكمبيوتر.
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "192.168.1.5"]
+CORS_ALLOW_ALL_ORIGINS = True
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
+# Allow CSRF requests from specific addresses
+# أثناء التطوير
+CSRF_TRUSTED_ORIGINS = [
+    "http://192.168.1.5:5173",
+    "http://192.168.1.5:5174",
+]
+# Allow CORS requests from specific addresses
+# Allow requests from this origin
+# أثناء التطوير
+CORS_ALLOWED_ORIGINS = [
+    "http://192.168.1.5:5173",
+]
+# python manage.py runserver 0.0.0.0:8000
+# _______________________________
 
 # Application definition
 

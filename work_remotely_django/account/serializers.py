@@ -6,7 +6,6 @@ from rest_framework import serializers
 # استيراد نموذج البيانات المراد تحويلة
 from .models import User, FriendshipRequest
 
-# from django.utils import timezone
 
 
 # 🧑 سيريلايزر لمستخدم

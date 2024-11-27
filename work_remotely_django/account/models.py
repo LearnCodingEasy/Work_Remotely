@@ -3,8 +3,7 @@
 # (UUID) التي يمكن استخدامها لتعريف المستخدمين.
 import uuid
 
-# settings: لاستيراد إعدادات
-# Django الخاصة بالمشروع.
+# settings:  لاستيراد إعدادات الخاصة بالمشروع
 from django.conf import settings
 
 # AbstractBaseUser, PermissionsMixin: لإنشاء نموذج مستخدم مخصص.
@@ -72,10 +71,10 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     # 📋 Custom Admin Link ربط المدير المخصص
     objects = CustomUserManager()
-    
+
     # مهارات
     skills = models.JSONField(default=list, blank=True, null=True)
-    
+
     # 👥 Friends and Characteristics of Friendships الأصدقاء وخصائص الصداقات
     friends = models.ManyToManyField("self")
     friends_count = models.IntegerField(default=0)

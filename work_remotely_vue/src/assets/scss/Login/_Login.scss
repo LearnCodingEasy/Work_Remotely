@@ -258,8 +258,8 @@
               display: none;
             }
           }
+          .mobile_body_white,
           .mobile_body_dark {
-            border: 0.5rem solid #130e0e;
             border-radius: 32px;
             -webkit-border-radius: 32px;
             -moz-border-radius: 32px;
@@ -288,7 +288,6 @@
               -moz-border-radius: 24px;
               -ms-border-radius: 24px;
               -o-border-radius: 24px;
-              border: 0.2rem solid #130e0e;
               height: 100%;
               background-color: #fff;
               padding: 1rem;
@@ -314,7 +313,7 @@
                   justify-content: center;
                   align-items: center;
                   div.p-card-header {
-                    height: 20%;
+                    height: 15%;
                     width: 100%;
                     display: flex;
                     align-items: center;
@@ -323,12 +322,12 @@
                   div.p-card-body {
                     padding: 0;
                     margin: 0;
-                    margin-bottom: 1rem;
-                    height: 80%;
+                    height: 85%;
                     display: flex;
                     flex-direction: column;
                     div.p-card-content {
-                      height: 80%;
+                      height: 90%;
+                      overflow-y: auto;
                       .prime_card_form_signup_content {
                         > div {
                           display: flex;
@@ -341,7 +340,7 @@
                       }
                     }
                     div.p-card-footer {
-                      height: 20%;
+                      height: 10%;
                       display: flex;
                       justify-content: center;
                       align-items: center;
@@ -472,6 +471,33 @@
               -o-border-radius: 50%;
               z-index: 10;
               display: none;
+            }
+          }
+          .mobile_body_white {
+            border: 0.5rem solid #e9e3e3;
+            .mobile_content {
+              border: 0.2rem solid #e9e3e3;
+            }
+            .voice_up,
+            .voice_down,
+            .power {
+              background-color: #e9e3e3;
+            }
+
+            .sonser {
+              background-color: #e9e3e3;
+            }
+            .voice {
+              background-color: #b3b0b0;
+            }
+            .carme {
+              background-color: #b3b0b0;
+            }
+          }
+          .mobile_body_dark {
+            border: 0.5rem solid #130e0e;
+            .mobile_content {
+              border: 0.2rem solid #130e0e;
             }
           }
         }

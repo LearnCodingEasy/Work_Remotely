@@ -25,6 +25,8 @@ urlpatterns = [
     # 🔗 Include URLs from the 'account' app for API endpoints
     # 🔗 تضمين روابط تطبيق 'account' للنقاط البرمجية
     path("api/", include("account.urls")),
+    #
+    path("api/website/", include("website.urls")),
     # 🔧 Admin panel for site management
     # 🔧 لوحة تحكم الإدارة لإدارة الموقع
     path("admin/", admin.site.urls),

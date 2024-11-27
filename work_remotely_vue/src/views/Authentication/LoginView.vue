@@ -421,3 +421,8 @@ export default {
 </script>
 
 <style lang="scss"></style>
+
+<!--
+learncodingeasy0100@gmail.com
+vscode@vscode.com
+-->

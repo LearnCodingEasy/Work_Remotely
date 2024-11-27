@@ -43,6 +43,8 @@ cd work_remotely_vue
 ```
 
 ```cmd
+npm run dev -- --host
+
 npm run dev
 ```
 

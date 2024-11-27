@@ -1,47 +1,58 @@
 /* Media Queries For All Screen */
 @mixin MediaQueries($device) {
+  // xxs Mobile 568px
   @if $device == xxs {
     @media screen and (max-width: 568px) {
-      @content;
-    }
-  } @else if $device == Xs {
-    @media screen and (min-width: 569px) and (max-width: 767px) {
-      @content;
-    }
-  } @else if $device == Md {
-    @media screen and (min-width: 768px) and (max-width: 991px) {
-      @content;
-    }
-  } @else if $device == Lg {
-    @media screen and (min-width: 992px) and (max-width: 1199px) {
-      @content;
-    }
-  } @else if $device == Xlg {
-    @media screen and (min-width: 1200px) and (max-width: 1399px) {
-      @content;
-    }
-  } @else if $device == Xxlg {
-    @media screen and (min-width: 1400px) {
       @content;
     }
   } @else if $device == Mobile {
     @media screen and (max-width: 568px) {
       @content;
     }
+  }
+  // Xs Tablet 569px 767px
+  @else if $device == Xs {
+    @media screen and (min-width: 569px) and (max-width: 767px) {
+      @content;
+    }
   } @else if $device == Tablet {
     @media screen and (min-width: 569px) and (max-width: 767px) {
+      @content;
+    }
+  }
+  // Md Laptop 768px 991px
+  @else if $device == Md {
+    @media screen and (min-width: 768px) and (max-width: 991px) {
       @content;
     }
   } @else if $device == Laptop {
     @media screen and (min-width: 768px) and (max-width: 991px) {
       @content;
     }
+  }
+  // Lg LaptopLg 992px 1199px
+  @else if $device == Lg {
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
   } @else if $device == LaptopLg {
     @media screen and (min-width: 992px) and (max-width: 1199px) {
       @content;
     }
+  }
+  // xlg Desktop 1200px 1399px
+  @else if $device == Xlg {
+    @media screen and (min-width: 1200px) and (max-width: 1399px) {
+      @content;
+    }
   } @else if $device == Desktop {
     @media screen and (min-width: 1200px) and (max-width: 1399px) {
+      @content;
+    }
+  }
+  // Xxlg DesktopLg  1400px
+  @else if $device == Xxlg {
+    @media screen and (min-width: 1400px) {
       @content;
     }
   } @else if $device == DesktopLg {
